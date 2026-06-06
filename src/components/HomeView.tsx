@@ -235,20 +235,24 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
         </div>
 
         {/* Content Box */}
-        <div className="relative z-10 w-full flex flex-col justify-end items-start text-left space-y-6 pb-12">
+        <div className="relative z-10 w-full flex flex-col justify-end items-center text-center space-y-6 pb-12">
 
-          <div className="space-y-3">
-            <span className="text-[10px] font-mono tracking-widest uppercase text-puka-gold">The Tea Shop</span>
-            <h1 className="text-4xl sm:text-5xl font-display font-extrabold text-white leading-tight tracking-tight">
-              PUKA <br />
-              <span className="text-puka-gold font-heading italic font-light text-3xl sm:text-4xl block mt-1" style={{ fontFamily: 'var(--font-heading), serif' }}>
-                Where Kerala Meets Over a Cup Of Chaya
+          <div className="space-y-3 flex flex-col items-center">
+            <span className="inline-flex items-center space-x-2 bg-puka-gold/20 border border-puka-gold/40 text-puka-gold-light text-[10px] uppercase tracking-[0.2em] font-bold px-4 py-1.5 rounded-full">
+              <Sparkles className="w-3 h-3 text-puka-gold animate-pulse" />
+              <span>Authentic Kerala Experience</span>
+            </span>
+            <h1 className="text-4xl sm:text-5xl font-display font-medium text-white leading-tight tracking-tight">
+              Puttum <br />
+              Kattanum, <br />
+              <span className="text-puka-gold font-heading font-normal italic block mt-1 text-3xl sm:text-4xl" style={{ fontFamily: 'var(--font-heading), serif' }}>
+                Stories & Steam.
               </span>
             </h1>
           </div>
 
-          <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-md">
-            Authentic puttu, kattan chaya, unforgettable flavors, and the timeless warmth of Kerala's traditional chayakkada culture.
+          <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-md mx-auto">
+            Authentic flavours, hot chaya and unforgettable moments. Welcome to Kerala's favourite <strong className="text-puka-gold font-bold">Chayakkada</strong>.
           </p>
 
           <div className="w-full flex flex-col sm:flex-row gap-3 pt-2">
