@@ -141,7 +141,7 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
       {/* 1. HERO SECTION (UNIFIED - DESKTOP & MOBILE) */}
       {/* ========================================== */}
 
-      <section className="relative min-h-screen flex items-end justify-center overflow-hidden bg-puka-black text-white">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-puka-black text-white">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -161,8 +161,9 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
           <div className="w-[1.5px] h-14 bg-puka-gold/40" />
         </div>
 
-        {/* Main Content - Centered, pinned to bottom */}
-        <div className="relative z-10 w-full max-w-3xl mx-auto px-6 sm:px-8 pb-20 sm:pb-24 lg:pb-28 flex flex-col items-center text-center">
+        {/* Main Content - Left aligned, vertically centered */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 flex flex-col items-start text-left">
+          <div className="max-w-2xl">
           
           {/* Branding Accent Label */}
           <span className="inline-flex items-center space-x-2 bg-puka-gold/20 border border-puka-gold/40 text-puka-gold-light text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold px-4 py-1.5 rounded-full mb-5 sm:mb-6">
@@ -180,16 +181,16 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
           </h1>
 
           {/* Subheading */}
-          <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-lg mb-8">
+          <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mb-8">
             Authentic flavours, hot chaya and unforgettable moments. Welcome to Kerala's favourite <strong className="text-puka-gold font-bold">Chayakkada</strong>.
           </p>
 
           {/* CTA Buttons */}
-          <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
             <button
               id="hero-cta-menu"
               onClick={() => { setView('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className="w-full sm:w-auto bg-puka-gold hover:bg-puka-gold-light text-puka-black font-bold px-8 py-4 rounded-full text-xs uppercase tracking-widest transition-all duration-300 transform hover:scale-[1.03] shadow-[0_5px_18px_rgba(200,155,60,0.35)] flex items-center justify-center space-x-2 cursor-pointer"
+              className="bg-puka-gold hover:bg-puka-gold-light text-puka-black font-bold px-8 py-4 rounded-full text-xs uppercase tracking-widest transition-all duration-300 transform hover:scale-[1.03] shadow-[0_5px_18px_rgba(200,155,60,0.35)] flex items-center justify-center space-x-2 cursor-pointer"
             >
               <span>Explore Menu</span>
               <ArrowRight className="w-4 h-4 text-puka-black" />
@@ -198,11 +199,12 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
             <button
               id="hero-cta-locations"
               onClick={() => { setView('locations'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className="w-full sm:w-auto bg-transparent hover:bg-white/10 text-white border border-white/30 px-8 py-4 rounded-full text-xs uppercase tracking-widest transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer"
+              className="bg-transparent hover:bg-white/10 text-white border border-white/30 px-8 py-4 rounded-full text-xs uppercase tracking-widest transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer"
             >
               <MapPin className="w-4 h-4 text-puka-gold" />
               <span>Find A Branch</span>
             </button>
+          </div>
           </div>
         </div>
 
