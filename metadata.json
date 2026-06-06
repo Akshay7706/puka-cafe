@@ -1,0 +1,6 @@
+{
+  "name": "PuKa Teashop",
+  "description": "Authentic Kerala puttu, kattan chaya, and the timeless warmth of Chayakkada culture meets modern digital excellence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
