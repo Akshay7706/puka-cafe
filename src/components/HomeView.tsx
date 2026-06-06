@@ -375,23 +375,24 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
 
       {/* 2B. MOBILE SIGNATURE DISHES (lg and below) */}
       <section className="py-16 bg-[#F6F1E7] lg:hidden">
-        <div className="text-center mb-10 space-y-1 px-4">
-          <span className="text-[#a32626] font-mono text-[10px] font-bold uppercase tracking-[0.25em] block">
-            -- Signature Dishes --
-          </span>
-          <h2 className="text-3xl font-display font-semibold text-puka-black tracking-tight" style={{ fontFamily: 'var(--font-display), serif' }}>
-            Crafted from Tradition
-          </h2>
-        </div>
+        <div className="px-4">
+          <div className="text-center mb-10 space-y-1">
+            <span className="text-[#a32626] font-mono text-[10px] font-bold uppercase tracking-[0.25em] block">
+              -- Signature Dishes --
+            </span>
+            <h2 className="text-3xl font-display font-semibold text-puka-black tracking-tight" style={{ fontFamily: 'var(--font-display), serif' }}>
+              Crafted from Tradition
+            </h2>
+          </div>
 
-        {/* Beigy capsules cards */}
-        <div className="flex overflow-x-auto gap-4 pb-4 px-4 no-scrollbar scrollbar-none snap-x snap-mandatory scroll-smooth">
-          {signatureDishes.slice(0, 5).map((item, index) => (
-            <div
-              key={item.id}
-              onClick={() => { setView('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className="bg-white rounded-2xl border border-gray-200/60 p-3.5 flex items-center gap-4 text-left shadow-sm hover:border-puka-gold/50 transition-all cursor-pointer shrink-0 w-[290px] snap-start"
-            >
+          {/* Beigy capsules cards */}
+          <div className="space-y-4">
+            {signatureDishes.slice(0, 4).map((item, index) => (
+              <div
+                key={item.id}
+                onClick={() => { setView('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                className="bg-white rounded-2xl border border-gray-200/60 p-3.5 flex items-center gap-4 text-left shadow-sm hover:border-puka-gold/50 transition-all cursor-pointer"
+              >
                 {/* Left image */}
                 <div className="w-24 h-24 rounded-xl overflow-hidden bg-gray-100 shrink-0 border border-gray-200/40 relative">
                   <img 
@@ -425,6 +426,7 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
               </div>
             ))}
           </div>
+        </div>
       </section>
 
 
