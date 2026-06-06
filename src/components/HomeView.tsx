@@ -136,80 +136,84 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
 
   return (
     <div id="home-view" className="bg-[#FAF7F2] font-sans">
-      
+
       {/* ========================================== */}
-      {/* 1. HERO SECTIONS (DESKTOP & MOBILE SPLIT) */}
+      {/* 1. HERO SECTION (UNIFIED - DESKTOP & MOBILE) */}
       {/* ========================================== */}
 
-      {/* 1A. DESKTOP HERO VIEW (lg and up) */}
-      <section className="relative min-h-[92vh] hidden lg:flex items-center overflow-hidden bg-puka-black text-white">
+      <section className="relative min-h-screen flex items-end justify-center overflow-hidden bg-puka-black text-white">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
             src={PUKA_IMAGES.heroChayaPuttu} 
             alt="Puttum Kattanum, Stories & Steam" 
-            className="w-full h-full object-cover object-center opacity-45 scale-102 filter brightness-[40%] contrast-110"
-            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-center opacity-45 filter brightness-[38%] contrast-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-puka-black via-transparent to-puka-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-puka-black via-puka-black/30 to-puka-black/40" />
           <div className="absolute inset-0 bg-black/10 backdrop-blur-[0.5px]" />
         </div>
 
-        {/* Left Vertical Info Rail */}
+        {/* Left Vertical Info Rail - Desktop Only */}
         <div className="absolute left-8 bottom-32 z-20 hidden xl:flex flex-col items-center space-y-6 select-none pointer-events-none">
           <span className="text-[10px] uppercase tracking-[0.3em] font-mono text-white/50 [writing-mode:vertical-lr] rotate-180">
-            SINCE 2015 • STORIES & STEAM
+            SINCE 2015 • STORIES &amp; STEAM
           </span>
           <div className="w-[1.5px] h-14 bg-puka-gold/40" />
         </div>
 
-        {/* Main Central Content Area */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-left w-full flex flex-col justify-center">
-          <div className="max-w-2xl mt-8">
-            {/* Branding Accent Label */}
-            <span className="inline-flex items-center space-x-2 bg-puka-gold/20 border border-puka-gold/40 text-puka-gold-light text-xs uppercase tracking-[0.2em] font-bold px-4 py-1.5 rounded-full mb-6">
-              <Sparkles className="w-3.5 h-3.5 text-puka-gold" />
-              <span>Authentic Kerala Experience</span>
-            </span>
-            
-            {/* Headline */}
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-medium text-white tracking-tight leading-[0.95] mb-6 select-text">
-              Puttum <br />
-              Kattanum, <br />
-              <span className="text-puka-gold font-heading font-normal italic block mt-2 text-5xl sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-heading), serif' }}>
-                Stories & Steam.
-              </span>
-            </h1>
-            
-            <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-8 max-w-xl font-sans leading-relaxed">
-              Authentic flavours, hot chaya and unforgettable moments. Welcome to Kerala's favourite <strong className="text-puka-gold font-bold">Chayakkada</strong>.
-            </p>
+        {/* Main Content - Centered, pinned to bottom */}
+        <div className="relative z-10 w-full max-w-3xl mx-auto px-6 sm:px-8 pb-20 sm:pb-24 lg:pb-28 flex flex-col items-center text-center">
+          
+          {/* Branding Accent Label */}
+          <span className="inline-flex items-center space-x-2 bg-puka-gold/20 border border-puka-gold/40 text-puka-gold-light text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold px-4 py-1.5 rounded-full mb-5 sm:mb-6">
+            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-puka-gold" />
+            <span>Authentic Kerala Experience</span>
+          </span>
 
-            {/* Pill Buttons */}
-            <div className="flex items-center gap-4">
-              <button
-                id="hero-cta-menu-desktop"
-                onClick={() => { setView('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="bg-puka-gold hover:bg-puka-gold-light text-puka-black font-bold px-8 py-4 rounded-full text-xs uppercase tracking-widest transition-all duration-300 transform hover:scale-[1.03] shadow-[0_5px_18px_rgba(200,155,60,0.35)] flex items-center justify-center space-x-2 cursor-pointer"
-              >
-                <span>Explore Menu</span>
-                <ArrowRight className="w-4 h-4 text-puka-black font-black" />
-              </button>
-              
-              <button
-                id="hero-cta-locations-desktop"
-                onClick={() => { setView('locations'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="bg-transparent hover:bg-white/10 text-white border border-white/30 px-8 py-4 rounded-full text-xs uppercase tracking-widest transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer"
-              >
-                <MapPin className="w-4 h-4 text-puka-gold" />
-                <span>Find A Branch</span>
-              </button>
-            </div>
+          {/* Headline */}
+          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-display font-medium text-white tracking-tight leading-[0.92] mb-5 sm:mb-6 select-text">
+            Puttum <br />
+            Kattanum, <br />
+            <span className="text-puka-gold font-heading font-normal italic block mt-2 text-4xl sm:text-5xl lg:text-7xl" style={{ fontFamily: 'var(--font-heading), serif' }}>
+              Stories &amp; Steam.
+            </span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-lg mb-8">
+            Authentic flavours, hot chaya and unforgettable moments. Welcome to Kerala's favourite <strong className="text-puka-gold font-bold">Chayakkada</strong>.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <button
+              id="hero-cta-menu"
+              onClick={() => { setView('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              className="w-full sm:w-auto bg-puka-gold hover:bg-puka-gold-light text-puka-black font-bold px-8 py-4 rounded-full text-xs uppercase tracking-widest transition-all duration-300 transform hover:scale-[1.03] shadow-[0_5px_18px_rgba(200,155,60,0.35)] flex items-center justify-center space-x-2 cursor-pointer"
+            >
+              <span>Explore Menu</span>
+              <ArrowRight className="w-4 h-4 text-puka-black" />
+            </button>
+
+            <button
+              id="hero-cta-locations"
+              onClick={() => { setView('locations'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              className="w-full sm:w-auto bg-transparent hover:bg-white/10 text-white border border-white/30 px-8 py-4 rounded-full text-xs uppercase tracking-widest transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer"
+            >
+              <MapPin className="w-4 h-4 text-puka-gold" />
+              <span>Find A Branch</span>
+            </button>
           </div>
         </div>
 
-        {/* Scroll down mouse animation detail */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 lg:left-12 lg:translate-x-0 z-20 flex items-center space-x-2.5 text-gray-400 text-[9px] font-mono tracking-[0.2em] uppercase select-none pointer-events-none">
+        {/* HOT CHAYA GOOD VIBES floating badge */}
+        <div className="absolute right-4 bottom-24 sm:right-8 sm:bottom-28 z-20 flex flex-col items-center bg-[#C89B3C] text-puka-black font-semibold text-[9px] uppercase tracking-widest px-3.5 py-1.5 rounded-full select-none shadow-md">
+          <span>HOT CHAYA</span>
+          <span className="text-[8px] font-bold text-white leading-none">GOOD VIBES</span>
+        </div>
+
+        {/* Scroll down indicator */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-1.5 text-gray-400 text-[9px] font-mono tracking-[0.2em] uppercase select-none pointer-events-none">
           <div className="w-5 h-9 border border-white/20 rounded-full flex justify-center p-1.5 opacity-70">
             <motion.div 
               animate={{ y: [0, 10, 0] }}
@@ -217,76 +221,7 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
               className="w-1.5 h-1.5 bg-puka-gold rounded-full" 
             />
           </div>
-          <span>Scroll Down</span>
-        </div>
-      </section>
-
-      {/* 1B. MOBILE HERO VIEW (lg and below) */}
-      <section className="relative min-h-screen flex lg:hidden items-end justify-center overflow-hidden bg-puka-black text-white px-4 pb-16">
-        {/* Background Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={PUKA_IMAGES.heroChayaPuttu} 
-            alt="Puka Tea Shop" 
-            className="w-full h-full object-cover opacity-40 filter brightness-[35%] contrast-110"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-puka-black via-transparent to-puka-black/40" />
-        </div>
-
-        {/* Content Box */}
-        <div className="relative z-10 w-full flex flex-col justify-end items-center text-center space-y-6 pb-12">
-
-          <div className="space-y-3 flex flex-col items-center">
-            <span className="inline-flex items-center space-x-2 bg-puka-gold/20 border border-puka-gold/40 text-puka-gold-light text-[10px] uppercase tracking-[0.2em] font-bold px-4 py-1.5 rounded-full">
-              <Sparkles className="w-3 h-3 text-puka-gold animate-pulse" />
-              <span>Authentic Kerala Experience</span>
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-display font-medium text-white leading-tight tracking-tight">
-              Puttum <br />
-              Kattanum, <br />
-              <span className="text-puka-gold font-heading font-normal italic block mt-1 text-3xl sm:text-4xl" style={{ fontFamily: 'var(--font-heading), serif' }}>
-                Stories & Steam.
-              </span>
-            </h1>
-          </div>
-
-          <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-md mx-auto">
-            Authentic flavours, hot chaya and unforgettable moments. Welcome to Kerala's favourite <strong className="text-puka-gold font-bold">Chayakkada</strong>.
-          </p>
-
-          <div className="w-full flex flex-col sm:flex-row gap-3 pt-2">
-            <button
-              id="hero-cta-menu-mobile"
-              onClick={() => { setView('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className="w-full py-3.5 bg-[#C89B3C] text-puka-black rounded-xl font-bold text-xs uppercase tracking-widest flex items-center justify-center space-x-2 cursor-pointer shadow-md"
-            >
-              <span>Explore Menu</span>
-              <ArrowRight className="w-4 h-4 text-puka-black" />
-            </button>
-            <button
-              id="hero-cta-locations-mobile"
-              onClick={() => { setView('locations'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className="w-full py-3.5 bg-transparent border border-white/20 text-white rounded-xl font-bold text-xs uppercase tracking-widest flex items-center justify-center space-x-2 cursor-pointer"
-            >
-              <MapPin className="w-3.5 h-3.5 text-puka-gold" />
-              <span>Find A Branch</span>
-            </button>
-          </div>
-
-          {/* HOT CHAYAGOOD VIBES floating element */}
-          <div className="absolute right-2 bottom-24 z-20 scale-85 flex flex-col items-center bg-[#C89B3C] text-puka-black font-semibold text-[9px] uppercase tracking-widest px-3.5 py-1.5 rounded-full select-none shadow-md">
-            <span>HOT CHAYA</span>
-            <span className="text-[8px] font-bold text-white leading-none">GOOD VIBES</span>
-          </div>
-
-          {/* Scroll Down */}
-          <div className="absolute bottom-2 left-2 flex items-center space-x-1.5 text-gray-500 text-[8px] font-mono tracking-widest uppercase z-10">
-            <div className="w-4 h-7 border border-white/10 rounded-full flex justify-center p-1">
-              <div className="w-1 h-2 bg-puka-gold rounded-full animate-bounce" />
-            </div>
-            <span>Scroll Down</span>
-          </div>
+          <span>Scroll</span>
         </div>
       </section>
 
