@@ -222,7 +222,7 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
       </section>
 
       {/* 1B. MOBILE HERO VIEW (lg and below) */}
-      <section className="relative min-h-[85vh] flex lg:hidden items-center justify-center overflow-hidden bg-puka-black text-white px-4 pt-24 pb-24">
+      <section className="relative min-h-screen flex lg:hidden items-center justify-center overflow-hidden bg-puka-black text-white px-4 pt-24 pb-8">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -235,7 +235,7 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
         </div>
 
         {/* Content Box */}
-        <div className="relative z-10 w-full flex flex-col justify-center items-start text-left space-y-6 pt-20">
+        <div className="relative z-10 w-full flex flex-col justify-center items-start text-left space-y-6 pt-16 pb-16">
 
           <div className="space-y-3">
             <span className="text-[10px] font-mono tracking-widest uppercase text-puka-gold">The Tea Shop</span>
@@ -271,13 +271,13 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
           </div>
 
           {/* HOT CHAYAGOOD VIBES floating element */}
-          <div className="absolute right-2 bottom-12 z-20 scale-85 flex flex-col items-center bg-[#C89B3C] text-puka-black font-semibold text-[9px] uppercase tracking-widest px-3.5 py-1.5 rounded-full select-none shadow-md">
+          <div className="absolute right-2 bottom-20 z-20 scale-85 flex flex-col items-center bg-[#C89B3C] text-puka-black font-semibold text-[9px] uppercase tracking-widest px-3.5 py-1.5 rounded-full select-none shadow-md">
             <span>HOT CHAYA</span>
             <span className="text-[8px] font-bold text-white leading-none">GOOD VIBES</span>
           </div>
 
           {/* Scroll Down */}
-          <div className="absolute bottom-1 left-1.2 flex items-center space-x-1.5 text-gray-500 text-[8px] font-mono tracking-widest uppercase z-10">
+          <div className="absolute bottom-4 left-4 flex items-center space-x-1.5 text-gray-500 text-[8px] font-mono tracking-widest uppercase z-10">
             <div className="w-4 h-7 border border-white/10 rounded-full flex justify-center p-1">
               <div className="w-1 h-2 bg-puka-gold rounded-full animate-bounce" />
             </div>
