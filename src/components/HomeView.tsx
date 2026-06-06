@@ -222,7 +222,7 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
       </section>
 
       {/* 1B. MOBILE HERO VIEW (lg and below) */}
-      <section className="relative min-h-[85vh] flex lg:hidden items-center justify-center overflow-hidden bg-puka-black text-white px-4 py-16">
+      <section className="relative min-h-[85vh] flex lg:hidden items-center justify-center overflow-hidden bg-puka-black text-white px-4 pt-24 pb-24">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -235,7 +235,7 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
         </div>
 
         {/* Content Box */}
-        <div className="relative z-10 w-full flex flex-col justify-center items-start text-left space-y-6 pt-12">
+        <div className="relative z-10 w-full flex flex-col justify-center items-start text-left space-y-6 pt-20">
 
           <div className="space-y-3">
             <span className="text-[10px] font-mono tracking-widest uppercase text-puka-gold">The Tea Shop</span>
