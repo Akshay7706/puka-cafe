@@ -30,7 +30,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'A traditional masterpiece with flavorful spiced minced beef layered inside soft, warm stone-ground red rice puttu.',
     price: 170,
     category: 'specials',
-    image: 'https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=600&auto=format&fit=crop',
+    image: PUKA_IMAGES.heroChayaPuttu,
     isSignature: true,
     spicyLevel: 2
   },
