@@ -1,6 +1,7 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { Send, CheckCircle2, Award, ClipboardList, ShieldAlert, Sparkles } from 'lucide-react';
 import { FranchiseEnquiry } from '../types';
+import { PUKA_IMAGES } from '../data';
 
 export default function FranchiseView() {
   const [formData, setFormData] = useState({
@@ -113,7 +114,7 @@ export default function FranchiseView() {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/src/assets/images/puka_hero_chaya_puttu_1780713067104.png" 
+            src={PUKA_IMAGES.heroChayaPuttu} 
             alt="Bring PuKa to Your City, Stories & Steam" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-[35%] contrast-110"
             referrerPolicy="no-referrer"

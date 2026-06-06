@@ -43,7 +43,7 @@ const VIDEO_STEPS = [
     title: "2. Premium Wayanad Dust Drop",
     subtitle: "STRONG KERALA BODY",
     description: "Our signature blend of high-grown black tea dust from the cool valleys of Wayanad is introduced directly into the boiling spiced infusion, turning it into a rich mahogany nectar of deep color.",
-    image: "/src/assets/images/puka_hero_chaya_puttu_1780713067104.png",
+    image: PUKA_IMAGES.heroChayaPuttu,
     metric1: "Steep Time: 4.5 mins",
     metric2: "Dust Grade: Super Fine"
   },
@@ -51,7 +51,7 @@ const VIDEO_STEPS = [
     title: "3. Traditional Meter Stretching",
     subtitle: "THE ORIGINAL FOAM",
     description: "Pulled back and forth in high, flowing meter arcs, the Master aerates the brew between polished brass vessels, cooling it to sweet perfection and forming a legendary silky white head.",
-    image: "/src/assets/images/puka_tea_stretching_1780713122585.png",
+    image: PUKA_IMAGES.teaStretching,
     metric1: "Arc Height: ~1.2 Meters",
     metric2: "Froth Texture: Velvet Crown"
   },
@@ -59,7 +59,7 @@ const VIDEO_STEPS = [
     title: "4. Bamboo Flour Steaming",
     subtitle: "THE HEART OF PUTTU",
     description: "Stone-ground red rice flour is packed into natural bamboo pipes with layers of fresh-grated sweet coconut, slowly steamed over copper reservoirs until fluffy and fragrant.",
-    image: "/src/assets/images/puka_cozy_chayakkada_1780713083652.png",
+    image: PUKA_IMAGES.cozyChayakkada,
     metric1: "Vapor pressure: Standard",
     metric2: "Coconut: 100% Organic"
   }

@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { Search, Flame, Coffee, Sparkles, Check, Info } from 'lucide-react';
-import { MENU_ITEMS } from '../data';
+import { MENU_ITEMS, PUKA_IMAGES } from '../data';
 import { MenuItem } from '../types';
 
 export default function MenuView() {
@@ -48,7 +48,7 @@ export default function MenuView() {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/src/assets/images/puka_hero_chaya_puttu_1780713067104.png" 
+            src={PUKA_IMAGES.heroChayaPuttu} 
             alt="The PuKa Menu, Stories & Steam" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-[35%] contrast-110"
             referrerPolicy="no-referrer"

@@ -1,6 +1,6 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { MapPin, Phone, Mail, Clock, Compass, ExternalLink, Navigation, Sparkles } from 'lucide-react';
-import { BRANCHES } from '../data';
+import { BRANCHES, PUKA_IMAGES } from '../data';
 import { LocationBranch } from '../types';
 
 interface LocationsViewProps {
@@ -118,7 +118,7 @@ export default function LocationsView({ selectedBranchSlug, setSelectedBranchSlu
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/src/assets/images/puka_hero_chaya_puttu_1780713067104.png" 
+            src={PUKA_IMAGES.heroChayaPuttu} 
             alt="Visit Our Branches, Stories & Steam" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-[35%] contrast-110"
             referrerPolicy="no-referrer"

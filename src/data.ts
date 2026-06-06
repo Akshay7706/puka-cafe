@@ -1,11 +1,15 @@
 import { MenuItem, LocationBranch, BlogPost, Testimonial, GalleryItem } from './types';
 
-// Let's import the specific images we generated
+import heroChayaPuttu from './assets/images/puka_hero_chaya_puttu_1780713067104.png';
+import cozyChayakkada from './assets/images/puka_cozy_chayakkada_1780713083652.png';
+import storefrontNight from './assets/images/puka_storefront_night_1780713101369.png';
+import teaStretching from './assets/images/puka_tea_stretching_1780713122585.png';
+
 export const PUKA_IMAGES = {
-  heroChayaPuttu: '/src/assets/images/puka_hero_chaya_puttu_1780713067104.png',
-  cozyChayakkada: '/src/assets/images/puka_cozy_chayakkada_1780713083652.png',
-  storefrontNight: '/src/assets/images/puka_storefront_night_1780713101369.png',
-  teaStretching: '/src/assets/images/puka_tea_stretching_1780713122585.png',
+  heroChayaPuttu,
+  cozyChayakkada,
+  storefrontNight,
+  teaStretching,
 };
 
 export const MENU_ITEMS: MenuItem[] = [

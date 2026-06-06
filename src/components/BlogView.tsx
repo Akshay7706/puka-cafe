@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { BookOpen, Calendar, Clock, ChevronRight, Share2, CornerDownRight } from 'lucide-react';
-import { BLOG_POSTS } from '../data';
+import { BLOG_POSTS, PUKA_IMAGES } from '../data';
 import { BlogPost } from '../types';
 
 export default function BlogView() {
@@ -29,7 +29,7 @@ export default function BlogView() {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/src/assets/images/puka_hero_chaya_puttu_1780713067104.png" 
+            src={PUKA_IMAGES.heroChayaPuttu} 
             alt="The PuKa Journal, Stories & Steam" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-[35%] contrast-110"
             referrerPolicy="no-referrer"

@@ -1,5 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
+import { PUKA_IMAGES } from '../data';
 
 export default function ContactView() {
   const [formData, setFormData] = useState({
@@ -62,7 +63,7 @@ export default function ContactView() {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/src/assets/images/puka_hero_chaya_puttu_1780713067104.png" 
+            src={PUKA_IMAGES.heroChayaPuttu} 
             alt="Get in Touch, Stories & Steam" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-[35%] contrast-110"
             referrerPolicy="no-referrer"

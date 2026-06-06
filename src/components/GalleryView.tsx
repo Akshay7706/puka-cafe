@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect, MouseEvent } from 'react';
 import { Heart, Search, Camera, Sparkles, Compass } from 'lucide-react';
-import { GALLERY_ITEMS } from '../data';
+import { GALLERY_ITEMS, PUKA_IMAGES } from '../data';
 import { GalleryItem } from '../types';
 
 export default function GalleryView() {
@@ -54,7 +54,7 @@ export default function GalleryView() {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/src/assets/images/puka_hero_chaya_puttu_1780713067104.png" 
+            src={PUKA_IMAGES.heroChayaPuttu} 
             alt="The PuKa Gallery, Stories & Steam" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-[35%] contrast-110"
             referrerPolicy="no-referrer"
