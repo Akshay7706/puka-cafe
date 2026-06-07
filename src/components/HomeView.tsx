@@ -165,11 +165,7 @@ export default function HomeView({ setView, setSelectedBranchSlug }: HomeViewPro
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 flex flex-col items-start text-left">
           <div className="max-w-2xl">
           
-          {/* Branding Accent Label */}
-          <span className="inline-flex items-center space-x-2 bg-puka-gold/20 border border-puka-gold/40 text-puka-gold-light text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold px-4 py-1.5 rounded-full mb-5 sm:mb-6">
-            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-puka-gold" />
-            <span>Authentic Kerala Experience</span>
-          </span>
+
 
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-8xl font-display font-medium text-white tracking-tight leading-[0.92] mb-5 sm:mb-6 select-text">
